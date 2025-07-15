@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<div id="modal-overlay" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal(1)">&times;</span>
+    <div class="modal-flex">
+      <img src="scandal.jpg" alt="The Royals of Scandal" class="modal-cover" />
+      <div class="modal-info">
+        <h2 class="modal-title">The Royals of Scandal</h2>
+        <p class="modal-genre">Science Fiction, Dystopian, Speculative, Political</p>
+
+        <p>
+          <span class="section-label">Synopsis:</span><br />
+          Peace there exists in the New World, a post-war monarchical society led by powerful families. House Swain, the liege lords of the north; House Ski, the matriarchs of the east; House Lawless, the lords of law; and House Cardinal, the custodians of the all-powerful Council. Soon peace falls as scandals arise. All while Icarus Swain attempts to reclaim his glory that never was.<br /><br />
+          The Royals of Scandal marks the rise of the New Delariarte, and the beginning of the Fall of the New World.
+        </p>
+
+        <p>
+          <span class="section-label">Characters:</span><br />
+          Icarus Swain, Yekaterina Ski, Yelena Toussaint, Augustus Cardinal, Ajax Swain, Drystan Rosenkreuz, Acheron Rousseau, Beauregard Lawless...
+        </p>
+
+        <button class="prelude-button" onclick="openPrelude()">Read Prelude</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="prelude-modal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closePrelude()">&times;</span>
+    <h2 class="modal-title">Prelude</h2>
+    <p class="prelude-text">
+    The noval gland (royal gland) is a small organ located in the brain of Homo novusapiens, responsible for producing one of five distinct hormone types. It began as a mutated brain tumor that evolved into a functional gland, granting novusapiens various superhuman abilities based on the hormone it secretes, distinguishing them as a high-level species, superior to Homo sapiens.<br />
+    Royals are born with a dormant noval gland, roughly the size of a pea. As the brain develops, the gland gradually grows, reaching full maturity by the age of seven and activating its potential. The specific hormone it secretes—and, by extension, the abilities it grants—is primarily determined by heredity.<br />
+    But even the strongest bloodlines could not escape the hands of fate, just as fate itself was never one to keep its hands to itself.
+    </p>
+
+    <button class="prelude-button" onclick="continueReading()">Continue Reading</button>
+
+<div id="chapter-list" class="chapter-list">
+  <h3>Chapters</h3>
+        <div class="chapter-box" onclick="toggleChapter(0)">
+        <div class="chapter-title">The Prologue</div>
+        <div id="desc-0" class="chapter-description-box">
+            It is the year 109 AR, House Swain and its brethren houses gather to mourn their dead. Eris Swain reveals Icarus Swain’s scandalous secret.
+        </div>
+        </div>
+
+        <div class="chapter-box" onclick="toggleChapter(1)">
+        <div class="chapter-title">
+          <span class="chapter-number">01</span> In the Present
+        </div>
+        <div id="desc-1" class="chapter-description-box">
+          It is the year 119, 10 years later, Icarus Swain is still a scandal. As his younger sister, Dione, prepares for her Tudor Trial, Icarus recalls how he is denied a trial of his own.
+        </div>
+      </div>
+
+        <div class="chapter-box" onclick="toggleChapter(2)">
+        <div class="chapter-title">
+          <span class="chapter-number">02</span> The Hedge Maze
+        </div>
+        <div id="desc-2" class="chapter-description-box">
+          During the celebration, Prince Acheron Rousseau discovers a scandalous affair.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(3)">
+        <div class="chapter-title">
+          <span class="chapter-number">03</span> The Old Tale
+        </div>
+        <div id="desc-3" class="chapter-description-box">
+          Crown Prince Ajax Swain breaks to Icarus the news: Icarus would be betrothed to Princess Katerina Ski, as Ajax himself to Crown Princess Tatiana Ski.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(4)">
+        <div class="chapter-title">
+          <span class="chapter-number">04</span> A Brief History of the New World
+        </div>
+        <div id="desc-4" class="chapter-description-box">
+          Lord Drystan tells his niece about the history of the New World.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(5)">
+        <div class="chapter-title">
+          <span class="chapter-number">05</span> The Coronation
+        </div>
+        <div id="desc-5" class="chapter-description-box">
+          Icarus meets Acheron Rousseau again, the latter seemingly more curious about the Swainish prince more than he should.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(6)">
+        <div class="chapter-title">
+          <span class="chapter-number">06</span> The Bear Trap
+        </div>
+        <div id="desc-6" class="chapter-description-box">
+          Archer Rousseau chases Icarus Swain like a bear lured to a trap.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(7)">
+        <div class="chapter-title">
+          <span class="chapter-number">07</span> Glory to the New World
+        </div>
+        <div id="desc-7" class="chapter-description-box">
+          Yelena Toussaint recounts Icarus Swain’s sentence: a court trial that stripped him of his birthrights, a verdict passed by Yelena herself.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(8)">
+        <div class="chapter-title">
+          <span class="chapter-number">08</span> Arthur & Circe
+        </div>
+        <div id="desc-8" class="chapter-description-box">
+          Beauregard Lawless recalls the first time he met Icarus Swain.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(9)">
+        <div class="chapter-title">
+          <span class="chapter-number">09</span> Squeaking Rats
+        </div>
+        <div id="desc-9" class="chapter-description-box">
+          As both parties reject their betrothal, Princess Yekaterina Ski threatens Icarus Swain.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(10)">
+        <div class="chapter-title">
+          <span class="chapter-number">10</span> Gods & Monsters
+        </div>
+        <div id="desc-10" class="chapter-description-box">
+          An ambush strikes the Council’s royal air transport as the Archbishop finds a window to rid Gregory Alvester.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(11)">
+        <div class="chapter-title">
+          <span class="chapter-number">11</span> The Four of Diamonds
+        </div>
+        <div id="desc-11" class="chapter-description-box">
+          Yekaterina Ski tries to break his sister, Tatiana X, away from the palace, from their prisons otherwise called betrothals, and away from their mother.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(12)">
+        <div class="chapter-title">
+          <span class="chapter-number">12</span> Paragon
+        </div>
+        <div id="desc-12" class="chapter-description-box">
+          Queen Tatiana IX goes lengths to convince Icarus Swain to wed her daughter, Yekaterina Ski.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(13)">
+        <div class="chapter-title">
+          <span class="chapter-number">13</span> The Second Son
+        </div>
+        <div id="desc-13" class="chapter-description-box">
+          Cassandra Pryor speaks about her second son, Icarus Swain.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(14)">
+        <div class="chapter-title">
+          <span class="chapter-number">14</span> The New Grand Duke
+        </div>
+        <div id="desc-14" class="chapter-description-box">
+          In the late Gregory’s stead, Godric Lionsliath gets crowned as the new Grand Duke of the New World as Twain Alvester accuses the Archbishop of murder.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(15)">
+        <div class="chapter-title">
+          <span class="chapter-number">14</span> The Ball
+        </div>
+        <div id="desc-15" class="chapter-description-box">
+          The Diamond Ball commences, and the announcement of Ajax Swain’s betrothal to Princess Tatiana X, as Icarus is to Princess Katja, looms around the corner. Meanwhile, Princess Eris Swain faces the loss of her life.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(16)">
+        <div class="chapter-title">
+          <span class="chapter-number">16</span> The Fall of the House of Delariarte
+        </div>
+        <div id="desc-16" class="chapter-description-box">
+          Yelena recounts the execution of the House of Delariarte, 10 years ago. In the present, the Council deals with the seeming resurrection of the dead house.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(17)">
+        <div class="chapter-title">
+          <span class="chapter-number">17</span> Daughters of the New World
+        </div>
+        <div id="desc-17" class="chapter-description-box">
+          A tale of four daughters: Yekaterina Ski speaks to her sister, Tanja, before their engagements. Meanwhile, Eris Swain tells Prince Levitt Lionsliath the news about their daughter.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(18)">
+        <div class="chapter-title">
+          <span class="chapter-number">18</span> Duty, Death, Diamonds
+        </div>
+        <div id="desc-18" class="chapter-description-box">
+          Alwyn Lawless recounts the story of his old lover. Meanwhile, an incident shakes the foundations of the New World.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(19)">
+        <div class="chapter-title">
+          <span class="chapter-number">19</span> God Save the Queen
+        </div>
+        <div id="desc-19" class="chapter-description-box">
+          Drystan Rosenkreuz and Godric Lionsliath set off to meet Damn Bytheriver, a suspected collaborator of the Delariarte.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(20)">
+        <div class="chapter-title">
+          <span class="chapter-number">20</span> The Bleeding Rose
+        </div>
+        <div id="desc-20" class="chapter-description-box">
+          Icarus meets King William Riviera for the first time, and learns the truth about Gomez Delariarte’s rebellion 10 years ago.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(21)">
+        <div class="chapter-title">
+          <span class="chapter-number">21</span> The Kiss
+        </div>
+        <div id="desc-21" class="chapter-description-box">
+          Cassandra speaks to her son, Icarus. Meanwhile, Icarus recounts his last conversation with the Princess at the ball, before she died. 
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(22)">
+        <div class="chapter-title">
+          <span class="chapter-number">22</span> The Murder & The Perjurist
+        </div>
+        <div id="desc-22" class="chapter-description-box">
+          Alwyn Lawless—“The Perjurist,” a man who can bring the truth out of someone by the touch of his hand—questions Damn Bytheriver—“The Murder,” a boy who births crows from his mouth.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(23)">
+        <div class="chapter-title">
+          <span class="chapter-number">23</span> Rule of the Best
+        </div>
+        <div id="desc-23" class="chapter-description-box">
+          A royal conclave summons the heads of all the houses in the New World.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(24)">
+        <div class="chapter-title">
+          <span class="chapter-number">24</span> The Whale
+        </div>
+        <div id="desc-24" class="chapter-description-box">
+          Duke Regent Morgan Westergard is summoned inside Icarus Swain’s chamber. Unhinged, dark, and absurd events follow suit.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(25)">
+        <div class="chapter-title">
+          <span class="chapter-number">25</span> Fig Island
+        </div>
+        <div id="desc-25" class="chapter-description-box">
+          The first part of a 3-chapter narrative run; Yelena arrives at Fig Island for the Council’s leisure hunt.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(26)">
+        <div class="chapter-title">
+          <span class="chapter-number">26</span> The Good Brother & the Broken
+        </div>
+        <div id="desc-26" class="chapter-description-box">
+          Ajax Swain attempts to stop Icarus from his war. Both brothers wager their lives in a fight.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(27)">
+        <div class="chapter-title">
+          <span class="chapter-number">27</span> Wanewood
+        </div>
+        <div id="desc-27" class="chapter-description-box">
+          The second part of a 3-chapter narrative run; Set in the Wanewood of Fig Island, Yelena, the Council, the Pope, King Henry, Lord Thristian and his vassal, Lord Roare begin with the hunt.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(28)">
+        <div class="chapter-title">
+          <span class="chapter-number">28</span> The Winged Lion & the Maned
+        </div>
+        <div id="desc-28" class="chapter-description-box">
+          Eris Swain pays Prince Levi Lionsliath a visit.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(29)">
+        <div class="chapter-title">
+          <span class="chapter-number">29</span> Salt Hall
+        </div>
+        <div id="desc-29" class="chapter-description-box">
+          The final part of a 3-chapter narrative run; Set in the Salt Hall of Fig Island, the hunters consummate their hunts and plan to draw the first blood.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(30)">
+        <div class="chapter-title">
+          <span class="chapter-number">30</span> The Sheep
+        </div>
+        <div id="desc-30" class="chapter-description-box">
+          Benjamin Velzzaro, the Sheep, defends his siege on Riarterra as newly crowned King Luther and the New World Council attempt to reclaim the city.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(31)">
+        <div class="chapter-title">
+          <span class="chapter-number">31</span> The Rage of Roswell
+        </div>
+        <div id="desc-31" class="chapter-description-box">
+          Icarus recounts the gruesome history of Queen Circe and Lord Arthur, and the rage of Lady Diana Roswell.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(32)">
+        <div class="chapter-title">
+          <span class="chapter-number">32</span> Conclave
+        </div>
+        <div id="desc-32" class="chapter-description-box">
+          Benjamin Velzzaro sneaks into the Papal Conclave as Cardinal Benjamin Decano. The macabre comes before a new pope is chosen.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(33)">
+        <div class="chapter-title">
+          <span class="chapter-number">33</span> Parliament City
+        </div>
+        <div id="desc-33" class="chapter-description-box">
+          The Archbishop Augustus and the Council visit the Parliament City, with the new pope, Pope Sixtus—the first novusapiens pope.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(34)">
+        <div class="chapter-title">
+          <span class="chapter-number">34</span> The Liar & the Archer
+        </div>
+        <div id="desc-34" class="chapter-description-box">
+          Archer Rousseau challenges Icarus Swain into a fight.
+        </div>
+      </div>
+
+      <div class="chapter-box" onclick="toggleChapter(35)">
+        <div class="chapter-title">
+          <span class="chapter-number">35</span> Next
+        </div>
+        <div id="desc-35" class="chapter-description-box">
+          wala pa gagu tinatamad pako magsulat
+        </div>
+      </div>
+
+      <div id="chapter-description" class="chapter-description"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div id="modal-overlay-2" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal(2)">&times;</span>
+    <div class="modal-flex">
+      <img src="slander.jpg" alt="The Royals of Slander" class="modal-cover" />
+      <div class="modal-info">
+        <h2 class="modal-title">The Royals of Slander</h2>
+        <p class="modal-genre">Science Fiction, Dystopian, Speculative, Political</p>
+        <p>
+          <span class="section-label">Synopsis:</span><br />
+          Slanderous accusations plague the New World as the New Delariarte continues to taunt the royalkind. Meanwhile, Berlyn Blackwall continues to uncover more secrets about her city.<br /><br />
+          The Royals of Slander marks the rise and fall of the New Delariarte.
+        </p>
+        <p>
+          <span class="section-label">Characters:</span><br />
+          Icarus Swain, Berlyn Blackwall, Yelena Toussaint, Augustus Cardinal, Abram Granger, William Riviera, Drystan Rosenkreuz, Alwyn Lawless, Ajax Swain, Eris Swain...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-overlay-3" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal(3)">&times;</span>
+    <div class="modal-flex">
+      <img src="perjury.jpg" alt="The Royals of Perjury" class="modal-cover" />
+      <div class="modal-info">
+        <h2 class="modal-title">The Royals of Perjury</h2>
+        <p class="modal-genre">Science Fiction, Dystopian, Speculative, Political</p>
+        <p>
+          <span class="section-label">Synopsis:</span><br />
+          Following the Beginning of the Fall of the New World, more royals weave lies, whether to preserve the New World or see it burn.<br /><br />
+          The Royals of Perjury marks the Swainish coup against House Swain, King Ajax's ascension, and the gruesome Erisian Wedding.
+        </p>
+        <p>
+          <span class="section-label">Characters:</span><br />
+          Eris Swain, Berlyn Blackwall, Yelena Toussaint, Augustus Cardinal, Cassandra Pryor, Ajax Swain, Gideon Grigoryan...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-overlay-4" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal(4)">&times;</span>
+    <div class="modal-flex">
+      <img src="regicide.jpg" alt="The Royals of Regicide" class="modal-cover" />
+      <div class="modal-info">
+        <h2 class="modal-title">The Royals of Regicide</h2>
+        <p class="modal-genre">Science Fiction, Dystopian, Speculative, Political</p>
+        <p>
+          <span class="section-label">Synopsis:</span><br />
+          As the New World continues to spiral towards ruin, kings begin to die one by one, and Icarus Swain gathers his former allies. All while Berlyn Blackwall plots her escape from Parliament City.<br /><br />
+        </p>
+        <p>
+          <span class="section-label">Characters:</span><br />
+          Icarus Swain, Eris Swain, Berlyn Blackwall, Rufus Arbogast, William Riviera, Yelena Toussaint, Augustus Cardinal, Rigor Riviera, Ajax Swain, Acheron Rousseau...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-overlay-5" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal(5)">&times;</span>
+    <div class="modal-flex">
+      <img src="acrimony.jpg" alt="The Royals of Acrimony" class="modal-cover" />
+      <div class="modal-info">
+        <h2 class="modal-title">The Royals of Acrimony</h2>
+        <p class="modal-genre">Science Fiction, Dystopian, Speculative, Political</p>
+        <p>
+          <span class="section-label">Synopsis:</span><br />
+          The royals harbor their acrimonies deep within, as Berlyn Blackwall's escape sparks a revolution for all of humankind.<br /><br />
+        </p>
+        <p>
+          <span class="section-label">Characters:</span><br />
+          Icarus Swain, Berlyn Blackwall, Dione Swain, Rufus Arbogast, William Riviera, Yelena Toussaint, Augustus Cardinal, Rigor Riviera, Ajax Swain, Archeron Rousseau...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-overlay-6" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal(6)">&times;</span>
+    <div class="modal-flex">
+      <img src="vengeance.jpg" alt="The Royals of Vengeance" class="modal-cover" />
+      <div class="modal-info">
+        <h2 class="modal-title">The Royals of Vengeance</h2>
+        <p class="modal-genre">Science Fiction, Dystopian, Speculative, Political</p>
+        <p>
+          <span class="section-label">Synopsis:</span><br />
+          As Berlyn Blackwall's army grows stronger, the royal race begins.<br /><br />
+          The Royals of Vengeance marks the Age of Persephone, the Race for Ichabod Newsaint, and the New Beginning of the Fall of the New World.
+        </p>
+        <p>
+          <span class="section-label">Characters:</span><br />
+          Icarus Swain, Berlyn Blackwall, Persephone Swain, Rufus Arbogast, Ichabod Newsaint, Rigor Riviera, Ajax Swain, Arischel Newsaint, Tristan Cardinal, Rafaela Newsaint, Innocent Newsaint...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-overlay-7" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal(7)">&times;</span>
+    <div class="modal-flex">
+      <img src="anarchy.jpg" alt="The Royals of Anarchy" class="modal-cover" />
+      <div class="modal-info">
+        <h2 class="modal-title">The Royals of Anarchy</h2>
+        <p class="modal-genre">Science Fiction, Dystopian, Speculative, Political</p>
+        <p>
+          <span class="section-label">Synopsis:</span><br />
+          As the final war knocks upon their doors, anarchy falls upon the New World.<br /><br />
+          The Royals of Anarchy marks the end of the Fall of the New World, and the rise of a new era.
+        </p>
+        <p>
+          <span class="section-label">Characters:</span><br />
+          Icarus Swain, Callista Swain, Berlyn Blackwall, Ajax Swain, Rufus Arbogast, Ezkill Bytheseashore, Yvain Swayne, Allister Swayne, Baron Cardinal...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<body>
+  <div class="container">
+    <h1>Library</h1>
+    <div class="book-grid">
+
+      <div class="book-card" onclick="toggleDetails(this)">
+        <img src="scandal.jpg" alt="The Royals of Scandal" class="book-cover" />
+        <h2 class="book-title">The Royals of Scandal</h2>
+        <div class="book-details">
+          <p><strong>Synopsis:</strong> Short synopsis for book 1.</p>
+          <p><strong>Genre:</strong> Science Fiction, Dystopian, Speculative, Political</p>
+          <p><strong>Characters:</strong> Icarus</p>
+        </div>
+      </div>
+
+      <div class="book-card" onclick="toggleDetails(this)">
+        <img src="slander.jpg" alt="The Royals of Slander" class="book-cover" />
+        <h2 class="book-title">The Royals of Slander</h2>
+        <div class="book-details">
+          <p><strong>Synopsis:</strong> Short synopsis for book 2.</p>
+          <p><strong>Genre:</strong> Science Fiction, Dystopian, Speculative, Political</p>
+          <p><strong>Characters:</strong> Icarus</p>
+        </div>
+      </div>
+
+      <div class="book-card" onclick="toggleDetails(this)">
+        <img src="perjury.jpg" alt="The Royals of Perjury" class="book-cover" />
+        <h2 class="book-title">The Royals of Perjury</h2>
+        <div class="book-details">
+          <p><strong>Synopsis:</strong> Short synopsis for book 2.</p>
+          <p><strong>Genre:</strong> Science Fiction, Dystopian, Speculative, Political</p>
+          <p><strong>Characters:</strong> Icarus</p>
+        </div>
+      </div>
+
+      <div class="book-card" onclick="toggleDetails(this)">
+        <img src="regicide.jpg" alt="The Royals of Regicide" class="book-cover" />
+        <h2 class="book-title">The Royals of Regicide</h2>
+        <div class="book-details">
+          <p><strong>Synopsis:</strong> Short synopsis for book 2.</p>
+          <p><strong>Genre:</strong> Science Fiction, Dystopian, Speculative, Political</p>
+          <p><strong>Characters:</strong> Icarus</p>
+        </div>
+      </div>
+
+      <div class="book-card" onclick="toggleDetails(this)">
+        <img src="acrimony.jpg" alt="The Royals of Acrimony" class="book-cover" />
+        <h2 class="book-title">The Royals of Acrimony</h2>
+        <div class="book-details">
+          <p><strong>Synopsis:</strong> Short synopsis for book 2.</p>
+          <p><strong>Genre:</strong> Science Fiction, Dystopian, Speculative, Political</p>
+          <p><strong>Characters:</strong> Icarus</p>
+        </div>
+      </div>
+
+      <div class="book-card" onclick="toggleDetails(this)">
+        <img src="vengeance.jpg" alt="The Royals of Vengeance" class="book-cover" />
+        <h2 class="book-title">The Royals of Vengeance</h2>
+        <div class="book-details">
+          <p><strong>Synopsis:</strong> Short synopsis for book 2.</p>
+          <p><strong>Genre:</strong> Science Fiction, Dystopian, Speculative, Political</p>
+          <p><strong>Characters:</strong> Icarus</p>
+        </div>
+      </div>
+
+      <div class="book-card" onclick="toggleDetails(this)">
+        <img src="anarchy.jpg" alt="The Royals of Anarchy" class="book-cover" />
+        <h2 class="book-title">The Royals of Anarchy</h2>
+        <div class="book-details">
+          <p><strong>Synopsis:</strong> Short synopsis for book 2.</p>
+          <p><strong>Genre:</strong> Science Fiction, Dystopian, Speculative, Political</p>
+          <p><strong>Characters:</strong> Science Fiction, Dystopian, Speculative, Political</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
